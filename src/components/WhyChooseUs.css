@@ -1,0 +1,48 @@
+.why-us-section {
+    padding: var(--section-padding);
+    background: var(--gradient-blue);
+    color: white;
+    text-align: center;
+}
+
+.why-us-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 3rem;
+    color: white;
+}
+
+.why-us-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.reason-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background 0.3s;
+    text-align: left;
+}
+
+.reason-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.reason-icon {
+    color: #a5f3fc;
+    flex-shrink: 0;
+}
+
+.reason-item span {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
