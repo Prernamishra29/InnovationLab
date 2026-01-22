@@ -1,21 +1,21 @@
-/* Dark Theme Services Section */
+/* High Contrast Services Section */
 .services-section {
     padding: var(--section-padding);
-    background: radial-gradient(circle at top center, #1e3a8a 0%, #0f172a 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
     position: relative;
     overflow: hidden;
     color: white;
 }
 
-/* Background Abstract Shapes */
+/* Vibrant Background Shapes */
 .services-section::before {
     content: '';
     position: absolute;
-    top: -10%;
-    left: -10%;
-    width: 800px;
-    height: 800px;
-    background: radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+    top: -200px;
+    right: -200px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
 }
@@ -23,51 +23,46 @@
 .services-section::after {
     content: '';
     position: absolute;
-    bottom: -10%;
-    right: -5%;
+    bottom: -200px;
+    left: -200px;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(56, 189, 248, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+    background: radial-gradient(circle, rgba(14, 165, 233, 0.2) 0%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
 }
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 2rem;
     position: relative;
     z-index: 2;
 }
 
+/* Card Design: White Cards on Dark Background for Visibility */
 .service-card {
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 0;
-    /* Remove padding to handle image/content layout */
-    border-radius: 1.5rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
+    background: #ffffff;
+    border-radius: 1.25rem;
     overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     flex-direction: column;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    height: 100%;
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
-    background: rgba(255, 255, 255, 0.07);
-    border-color: rgba(14, 165, 233, 0.3);
-    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-/* Pseudo-header gradient "Image" substitute */
+/* Gradient Header/Image Placeholder */
 .service-image-placeholder {
-    height: 140px;
-    width: 100%;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.02) 100%);
+    height: 120px;
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
     position: relative;
     display: flex;
     align-items: center;
@@ -75,82 +70,122 @@
     overflow: hidden;
 }
 
-.service-image-placeholder::before {
+/* Add a diagonal decoration */
+.service-image-placeholder::after {
     content: '';
     position: absolute;
-    width: 150%;
-    height: 150%;
-    background: radial-gradient(circle, rgba(14, 165, 233, 0.4) 0%, transparent 60%);
-    top: -50%;
-    left: -50%;
-    transition: transform 0.6s ease;
-}
-
-.service-card:hover .service-image-placeholder::before {
-    transform: translate(20%, 20%);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: white;
+    clip-path: polygon(0 100%, 100% 100%, 100% 0);
 }
 
 .service-icon-bg {
-    width: 60px;
-    height: 60px;
-    background: rgba(15, 23, 42, 0.6);
+    width: 56px;
+    height: 56px;
+    background: white;
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-secondary);
+    color: var(--color-primary);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     position: relative;
-    z-index: 10;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.4s ease;
+    z-index: 2;
+    transition: transform 0.3s ease;
 }
 
 .service-card:hover .service-icon-bg {
-    background: var(--color-secondary);
-    color: white;
     transform: scale(1.1) rotate(5deg);
-    border-color: transparent;
-    box-shadow: 0 0 20px rgba(14, 165, 233, 0.4);
+    background: var(--color-primary);
+    color: white;
 }
 
 .service-content {
-    padding: 2rem;
+    padding: 1.5rem 1.5rem 2rem;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    background: white;
 }
 
 .service-title {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     font-weight: 700;
+    color: var(--color-text-main);
     margin-bottom: 0.75rem;
-    color: white;
-    transition: color 0.3s;
+}
+
+.service-card:hover .service-title {
+    color: var(--color-primary);
 }
 
 .service-desc {
-    font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.925rem;
+    color: var(--color-text-muted);
     line-height: 1.6;
     margin-bottom: 1.5rem;
     flex-grow: 1;
 }
 
 .service-link {
-    font-size: 0.9rem;
+    font-size: 0.875rem;
     font-weight: 600;
     color: var(--color-secondary);
     text-decoration: none;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    transition: all 0.3s ease;
+    gap: 6px;
+    transition: gap 0.2s ease;
     margin-top: auto;
-    align-self: flex-start;
 }
 
 .service-link:hover {
-    color: white;
-    padding-left: 5px;
+    gap: 10px;
+    color: var(--color-primary);
+}
+
+/* Dark Theme Overrides for Section Title */
+/* Since section bg is dark, we force title to white */
+.services-section .section-title {
+    color: white !important;
+}
+
+.services-section .section-subtitle {
+    color: #7dd3fc !important;
+    /* Lighter blue for visibility */
+}
+
+.services-section .section-desc {
+    color: #cbd5e1 !important;
+    /* Light gray */
+}
+
+.section-header-white {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 3rem;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    .services-section {
+        padding: 3rem 1rem;
+    }
+
+    .services-grid {
+        gap: 1.5rem;
+        grid-template-columns: 1fr;
+        /* Force single column on smaller tablets/mobile */
+    }
+
+    .service-card {
+        border-radius: 1rem;
+    }
+
+    .service-content {
+        padding: 1.5rem;
+    }
 }

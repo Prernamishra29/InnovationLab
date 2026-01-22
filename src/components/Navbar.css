@@ -120,4 +120,15 @@
     .mobile-toggle {
         display: block;
     }
+
+    .navbar {
+        padding: 1rem 0;
+        background: white;
+        /* Force white bg on mobile for visibility */
+        box-shadow: var(--shadow-sm);
+    }
+
+    .logo {
+        color: var(--color-primary);
+    }
 }

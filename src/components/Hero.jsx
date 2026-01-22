@@ -30,7 +30,7 @@ const Hero = () => {
                         </a>
                     </div>
 
-                    <div className="hero-stats">
+                    {/* <div className="hero-stats">
                         <div className="stat-item">
                             <span className="stat-number">500+</span>
                             <span className="stat-label">Publications</span>
@@ -45,7 +45,7 @@ const Hero = () => {
                             <span className="stat-number">2000+</span>
                             <span className="stat-label">Students Mentored</span>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </section>

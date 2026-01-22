@@ -35,7 +35,7 @@ const Contact = () => {
                                 <div className="icon-box"><MapPin size={20} /></div>
                                 <div>
                                     <h4>Location</h4>
-                                    <p>New York, NY 10012, US</p>
+                                    <p>Shirdi, Maharashtra, India</p>
                                 </div>
                             </div>
                         </div>

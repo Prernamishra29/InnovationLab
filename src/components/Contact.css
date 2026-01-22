@@ -102,3 +102,17 @@
         padding: 1.5rem;
     }
 }
+
+@media (max-width: 600px) {
+    .contact-section {
+        padding: 3rem 1rem;
+    }
+
+    .contact-title {
+        font-size: 2rem;
+    }
+
+    .contact-form-wrapper {
+        padding: 1.25rem;
+    }
+}
