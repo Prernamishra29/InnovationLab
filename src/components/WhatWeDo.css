@@ -18,7 +18,6 @@
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-    group: hover;
 }
 
 .activity-card:hover {
@@ -62,6 +61,20 @@
 @media (min-width: 1024px) {
     .activities-grid>*:nth-last-child(1):nth-child(odd) {
         /* grid-column: span 2; */
-        /* Center logic handled by standard grid gap and auto-fit */
+    }
+}
+
+@media (max-width: 600px) {
+    .what-we-do {
+        padding: 3rem 1rem;
+    }
+
+    .activities-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .activity-card {
+        padding: 1.5rem;
     }
 }
